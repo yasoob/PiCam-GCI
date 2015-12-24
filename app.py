@@ -1,6 +1,6 @@
 import picam
-
-i = picam.takePhoto()
+import os
 
 for i in range(1, 11):
-    i.save(os.path.join(os.getcwd(), 'image{}.jpg'.format(i)))
+    pic = picam.takePhoto()
+    pic.save(os.path.join(os.getcwd(), 'image{}.jpg'.format(i)))
